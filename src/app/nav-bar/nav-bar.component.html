@@ -1,23 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Linda Sibeko</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
-  </div>
 
+
+
+<nav class="navbar sticky-top navbar-expand-lg shadow-sm bg-primary py-0 my-0" style="height: 4rem;">
+  <div class="container-fluid px-0">
+
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <span class="d-flex justify-content-center align-items-center  bg-transparent mx-2"
+            style="width: 3rem; height: 3rem;font-weight: bold">
+      <b> <svg xmlns="http://www.w3.org/2000/svg" width="20"   color="white" height="20" fill="currentColor" class="bi bi-code-slash"
+            viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+      </svg>
+        </b>
+      </span>
+      <span class="fw-bold text-white">Linda Sibeko</span>
+    </a>
+
+
+    <div class="collapse navbar-collapse justify-content-end bg-primary w-100 rounded-bottom-3" id="navbarToggler">
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item px-1">
+          <a href="#" class="btn btn-outline-info my-1 my-lg-0 text-white">Home</a>
+        </li>
+        <li class="nav-item px-1">
+          <button routerLink="/home/projects" class="btn bg-transparent my-1 my-lg-0 text-white">Projects</button>
+        </li>
+        <li class="nav-item px-1">
+          <button routerLink="/home/about" class="btn bg-transparent my-1 my-lg-0 text-white">About</button>
+        </li>
+        <li class="nav-item px-1">
+          <a class="btn bg-transparent my-1 my-lg-0 text-white" href="#" target="_blank">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 </nav>
+
+
+
+
+
