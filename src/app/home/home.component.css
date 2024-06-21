@@ -21,3 +21,27 @@ p.lead {
 .ml-auto {
   margin-left: auto;
 }
+
+/* Media query for phone screens */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 3em; /* Smaller heading on phone screens */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Smaller subheading on phone screens */
+  }
+
+  p.lead {
+    font-size: 1.2em; /* Smaller lead text on phone screens */
+  }
+
+  .custom-icon-size {
+    font-size: 1em; /* Smaller icons on phone screens */
+  }
+
+  .btn-lg {
+    font-size: 0.875rem; /* Smaller button text on phone screens */
+    padding: 0.5rem 0.75rem; /* Adjust button padding */
+  }
+}
