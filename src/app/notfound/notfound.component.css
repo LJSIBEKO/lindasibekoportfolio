@@ -1,0 +1,46 @@
+/* not-found.component.scss */
+:host {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* White background */
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-top: 1rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn-dark {
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+.btn-dark:hover {
+  background-color: #fff; /* Dark gray on hover */
+  color: #000; /* White text on hover */
+}
+
+@media (max-width: 768px) {
+  .bi-sign-dead-end {
+    font-size: 8rem; /* Adjust icon size for smaller screens */
+  }
+}
