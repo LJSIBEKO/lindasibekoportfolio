@@ -7,6 +7,9 @@ import {HomeComponent} from './home/home.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { FooterComponent } from './footer/footer.component';
     NavBarComponent,
     HomeComponent,
     NotfoundComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    ExperienceComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

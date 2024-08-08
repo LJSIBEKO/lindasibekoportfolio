@@ -1,0 +1,27 @@
+.container {
+  margin-top: 20px;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-icon {
+  font-size: 1.5rem; /* Reduced size */
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+.card-icon:hover {
+  color: #0056b3; /* Change color on hover */
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 1rem;
+}
