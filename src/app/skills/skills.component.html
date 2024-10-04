@@ -1,14 +1,35 @@
-<div class="container">
-  <h3 class="text-center mb-4">Skills</h3>
+<div class="container mt-5" id="skills">
   <div class="row justify-content-center">
-    <div class="col-md-4 col-lg-3 mb-3" *ngFor="let skill of skills">
-      <div class="card text-center">
+    <!-- Frontend Card -->
+    <div class="col-md-5 col-12 mx-2 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header text-center">
+          <h5>Front End</h5>
+        </div>
         <div class="card-body">
-          <i class="{{ skill.icon }} card-icon mb-3"></i>
-          <h5 class="card-title">{{ skill.name }}</h5>
+          <ul class="list-group">
+            <li *ngFor="let skill of frontEndSkills" class="list-group-item d-flex align-items-center">
+              <i class="{{ skill.icon }} me-2"></i>{{ skill.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend Card -->
+    <div class="col-md-5 col-12 mx-2 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header text-center">
+          <h5>Back End</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li *ngFor="let skill of backEndSkills" class="list-group-item d-flex align-items-center">
+              <i class="{{ skill.icon }} me-2"></i>{{ skill.name }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
-
