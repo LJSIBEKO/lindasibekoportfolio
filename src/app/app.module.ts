@@ -12,6 +12,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectComponent } from './project/project.component';
 import { FolderComponent } from './folder/folder.component';
+import { OpenFolderComponent } from './open-folder/open-folder.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FolderComponent } from './folder/folder.component';
     ExperienceComponent,
     SkillsComponent,
     ProjectComponent,
-    FolderComponent
+    FolderComponent,
+    OpenFolderComponent
   ],
   imports: [
     BrowserModule,

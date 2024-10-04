@@ -3,6 +3,9 @@
   padding: 10px;
   border-radius: 5px;
   transition: transform 0.2s, background-color 0.2s;
+  display: flex; /* Align items */
+  flex-direction: column; /* Stack icon and name vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 .folder-icon {
@@ -12,7 +15,8 @@
 .folder-name {
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: #333; /* Default text color */
+  margin-top: 5px; /* Space between icon and name */
 }
 
 /* Add hover effect */
@@ -20,5 +24,17 @@
   transform: scale(1.05);
   cursor: pointer;
   background-color: #f0f0f0; /* Gray background on hover */
-  border-radius: 10px;
+  border-radius: 10px; /* Slightly larger border radius on hover */
+}
+
+/* Active state for the folder */
+.folder.clicked {
+  background-color: blue; /* Change background color to blue */
+  color: white; /* Change folder color to white */
+  transform: scale(1.05); /* Scale effect when clicked */
+}
+
+/* Change the folder name color when clicked */
+.folder.clicked .folder-name {
+  color: white; /* Change text color to white */
 }

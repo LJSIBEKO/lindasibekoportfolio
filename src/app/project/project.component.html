@@ -1,47 +1,123 @@
 <!--
-<div class="container">
-  <h1 class="my-4">My Projects</h1>
-  <div class="row">
-    <div class="col-md-6 mb-4" *ngFor="let project of projects">
-      <div class="card">
-        <img [src]="project.imageUrl" class="card-img-top" alt="{{ project.name }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ project.name }}</h5>
-          <p class="card-text">{{ project.description }}</p>
-          <div class="d-flex justify-content-end">
-            <a [href]="project.codeUrl" class="btn btn-primary me-2">
-              <i class="bi bi-code"></i> View Code
-            </a>
-            <a [href]="project.projectUrl" class="btn btn-success">
-              <i class="bi bi-eye"></i> View Project
-            </a>
+<div class="container-fluid mt-5">
+  &lt;!&ndash; Header &ndash;&gt;
+  <h1 class="display-4 text-center">Projects</h1>
+
+  <div class="row mt-5">
+    &lt;!&ndash; Sidebar: Folders (always visible) &ndash;&gt;
+    <div class="col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item" (click)="onFolderClick('backend')" [class.active]="activeFolder === 'backend'">
+          Backend Folder
+        </li>
+        <li class="list-group-item" (click)="onFolderClick('frontend')" [class.active]="activeFolder === 'frontend'">
+          Frontend Folder
+        </li>
+      </ul>
+    </div>
+
+    &lt;!&ndash; Main Content: Display projects based on selected folder &ndash;&gt;
+    <div class="col-md-9">
+      &lt;!&ndash; Back button to return to folder view &ndash;&gt;
+      <div *ngIf="activeFolder">
+        <button class="btn btn-secondary mb-3" (click)="goBack()">← Back</button>
+        <h2>{{ activeFolder === 'backend' ? 'Backend Projects' : 'Frontend Projects' }}</h2>
+
+        &lt;!&ndash; Display the projects for the selected folder &ndash;&gt;
+        <div class="row">
+          <div class="col-md-4" *ngFor="let project of visibleProjects">
+            <div class="card mb-4">
+              <img [src]="project.imageUrl" class="card-img-top" alt="{{ project.name }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ project.name }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      &lt;!&ndash; Initial message when no folder is selected &ndash;&gt;
+      <div *ngIf="!activeFolder">
+        <p>Select a folder to view its projects.</p>
       </div>
     </div>
   </div>
 </div>
 -->
-
-<!--<div class="folder text-center">
-  <div class="folder-icon">
-    <i class="bi bi-folder-fill text-warning"></i>
-  </div>
-  <div class="folder-name mt-2">{{ folderName }}</div>
-</div>-->
-
-<div class="container text-center mt-5">
+<div class="container-fluid mt-5">
   <!-- Header -->
-  <h1 class="text-center mb-4">Projects</h1>
+  <h1 class="display-4 text-center">Projects</h1>
 
-  <!-- Folders -->
-  <div class="row justify-content-center mt-4">
-    <div class="col-6 col-md-3 d-flex justify-content-center">
-      <app-folder folderName="Backend"></app-folder>
+  <div class="row mt-5">
+
+   <!-- <div class="col-md-3">
+      <div class="folder-container">
+        &lt;!&ndash; Backend Folder &ndash;&gt;
+        <div  (click)="onFolderClick('backend')" [class.open]="activeFolder === 'backend'">
+          <app-folder folderName="backend" isClicked="{{activeFolder=='backend'}}"></app-folder>
+        </div>
+
+        &lt;!&ndash; Frontend Folder &ndash;&gt;
+        <div  (click)="onFolderClick('frontend')" [class.open]="activeFolder === 'frontend'">
+          <app-folder folderName="frontend" isClicked="{{activeFolder=='frontend'}}"></app-folder>
+        </div>
+      </div>
+    </div>-->
+
+    <div class="col-md-3">
+      <div class="folder-container">
+        <!-- Backend Folder -->
+        <div (click)="onFolderClick('backend')" [class.open]="activeFolder === 'backend'">
+          <app-folder
+            folderName="Backend"
+            [isClicked]="activeFolder === 'backend'">
+          </app-folder>
+        </div>
+
+        <!-- Frontend Folder -->
+        <div (click)="onFolderClick('frontend')" [class.open]="activeFolder === 'frontend'">
+          <app-folder
+            folderName="Frontend"
+            [isClicked]="activeFolder === 'frontend'">
+          </app-folder>
+        </div>
+      </div>
     </div>
-    <div class="col-6 col-md-3 d-flex justify-content-center">
-      <app-folder folderName="Frontend"></app-folder>
+
+    <!-- Main Content: Display projects based on selected folder -->
+    <div class="col-md-9">
+      <!-- Back button to return to folder view -->
+      <div *ngIf="activeFolder">
+        <button class="btn btn-secondary mb-3" (click)="goBack()">← Back</button>
+        <h2>{{ activeFolder === 'backend' ? 'Backend Projects' : 'Frontend Projects' }}</h2>
+
+        <!-- Display the projects for the selected folder -->
+        <div class="row">
+          <div class="col-md-4" *ngFor="let project of visibleProjects">
+            <div class="card mb-4">
+              <img [src]="project.imageUrl" class="card-img-top" alt="{{ project.name }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ project.name }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Initial message when no folder is selected -->
+      <div *ngIf="!activeFolder" class="message-container">
+        <h2 class="small-header">These Are My Projects</h2>
+        <h3 class="sub-header">A Journey of Learning and Growth</h3>
+        <p class="small-text">
+          Here are all my projects, where I've dedicated myself to learning and improving through hands-on experience. Each project represents an opportunity I've taken to upskill and challenge myself by diving deeper into both <strong>backend</strong> and <strong>frontend</strong> development.
+        </p>
+        <p class="small-text">
+          On the left, you'll find two folders: one for <strong>Backend</strong> projects and another for <strong>Frontend</strong> projects. Simply click on any folder, and it will open up to reveal the work I’ve done in that area. Each project includes visuals and descriptions that showcase the skills I've gained and the progress I've made. This dashboard is a reflection of my journey, and how I've pushed myself to keep learning and growing through practical work.
+        </p>
+      </div>
+
     </div>
   </div>
 </div>
-

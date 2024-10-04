@@ -7,6 +7,9 @@ import {Component, Input} from '@angular/core';
 })
 export class FolderComponent {
   @Input() folderName!: string;
+  @Input() isClicked!: boolean;
 
-
+  toggleFolder() {
+    this.isClicked = !this.isClicked; // Toggle the clicked state
+  }
 }

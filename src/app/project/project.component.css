@@ -1,48 +1,81 @@
-/*
-.card {
-  transition: transform 0.2s;
-  border: 2px solid #007bff; !* Change color as needed *!
-  border-radius: 5px; !* Optional: add rounded corners *!
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Optional: add a shadow effect *!
+/* Folder Container */
+.folder-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-  !* Removed the border from the image *!
-  border-radius: 5px; !* Optional: keep rounded corners *!
-}
-*/
+/* Folder styling */
 .folder {
-  width: 120px;
-  padding: 10px;
+  position: relative;
+  width: 150px;
+  height: 100px;
+  background-color: #ffc107; /* Folder color */
   border-radius: 5px;
-  transition: transform 0.2s;
-}
-
-.folder-icon {
-  font-size: 50px;
-}
-
-.folder-name {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-}
-
-.folder:hover {
-  transform: scale(1.05);
   cursor: pointer;
-}
-h1 {
-  color: #333;
+  transition: background-color 0.3s ease, height 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
   font-weight: bold;
+  color: #333;
 }
 
-.folder {
+/* Folder tab at the top */
+.folder-tab {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 60px;
+  height: 20px;
+  background-color: #ffc107;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Folder body (text container) */
+.folder-body {
+  text-align: center;
+}
+
+/* Hover effect */
+.folder:hover {
+  background-color: #f1c40f;
+}
+
+/* Folder opening effect */
+.folder.open {
+  height: 200px; /* Expanding folder */
+  background-color: #ffe082; /* Slightly lighter color when opened */
+}
+
+/* Active folder styling */
+.folder.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Projects Display */
+.card {
   margin-bottom: 20px;
 }
+
+.small-header {
+  font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.sub-header {
+  font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.small-text {
+  font-size: 1rem; /* Adjust size as needed */
+}
+.message-container {
+  max-width: 600px; /* Adjust the maximum width as needed */
+  padding: 1rem;    /* Optional: Add some padding */
+  line-height: 1.5; /* Increase line height for better readability */
+  text-align: left; /* Align text to the left */
+}
+
+
