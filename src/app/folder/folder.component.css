@@ -1,0 +1,24 @@
+.folder {
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.folder-icon {
+  font-size: 50px;
+}
+
+.folder-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Add hover effect */
+.folder:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #f0f0f0; /* Gray background on hover */
+  border-radius: 10px;
+}
