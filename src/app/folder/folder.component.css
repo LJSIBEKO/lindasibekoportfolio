@@ -1,40 +1,40 @@
 .folder {
-  width: 120px;
-  padding: 10px;
-  border-radius: 5px;
-  transition: transform 0.2s, background-color 0.2s;
-  display: flex; /* Align items */
-  flex-direction: column; /* Stack icon and name vertically */
-  align-items: center; /* Center items horizontally */
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 120px;
 }
 
-.folder-icon {
-  font-size: 50px;
+.folder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.folder.clicked {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.folder-icon i {
+  font-size: 3rem;
+  transition: color 0.3s ease;
+}
+
+.folder.clicked .folder-icon i {
+  color: #ffd700 !important;
 }
 
 .folder-name {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333; /* Default text color */
-  margin-top: 5px; /* Space between icon and name */
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2c3e50;
 }
 
-/* Add hover effect */
-.folder:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-  background-color: #f0f0f0; /* Gray background on hover */
-  border-radius: 10px; /* Slightly larger border radius on hover */
-}
-
-/* Active state for the folder */
-.folder.clicked {
-  background-color: blue; /* Change background color to blue */
-  color: white; /* Change folder color to white */
-  transform: scale(1.05); /* Scale effect when clicked */
-}
-
-/* Change the folder name color when clicked */
 .folder.clicked .folder-name {
-  color: white; /* Change text color to white */
+  color: white;
 }

@@ -1,57 +1,227 @@
-.container-fluid {
-  padding: 0 6%;
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 6em;
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
 }
 
-h2 {
-  font-size: 2em;
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
-p.lead {
-  font-size: 1.5em;
+.hero-greeting {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+  font-weight: 300;
 }
 
-.btn-lg i {
-  font-size: 1.5em;
+.hero-name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #fff, #f8f9fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.ml-auto {
-  margin-left: auto;
+.hero-title {
+  font-size: 2rem;
+  color: #ffd700;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-/* Media query for phone screens */
-@media (max-width: 576px) {
-  h1 {
-    font-size: 3em; /* Smaller heading on phone screens */
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-btn.github {
+  background: rgba(51, 51, 51, 0.8);
+  color: white;
+}
+
+.social-btn.linkedin {
+  background: rgba(0, 119, 181, 0.8);
+  color: white;
+}
+
+.social-btn.twitter {
+  background: rgba(29, 161, 242, 0.8);
+  color: white;
+}
+
+.social-btn.facebook {
+  background: rgba(24, 119, 242, 0.8);
+  color: white;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+}
+
+.btn-outline-primary {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: white;
+  color: #667eea;
+}
+
+.hero-image-container {
+  position: relative;
+  height: 400px;
+}
+
+.floating-elements {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-icon.code {
+  top: 20%;
+  left: 10%;
+  background: rgba(255, 215, 0, 0.8);
+  color: #333;
+  animation-delay: 0s;
+}
+
+.floating-icon.graduation {
+  top: 50%;
+  right: 20%;
+  background: rgba(40, 167, 69, 0.8);
+  color: white;
+  animation-delay: 1s;
+}
+
+.floating-icon.rocket {
+  bottom: 20%;
+  left: 30%;
+  background: rgba(220, 53, 69, 0.8);
+  color: white;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
-
-  h2 {
-    font-size: 1.5em; /* Smaller subheading on phone screens */
-  }
-
-  p.lead {
-    font-size: 1.2em; /* Smaller lead text on phone screens */
-  }
-
-  .custom-icon-size {
-    font-size: 1em; /* Smaller icons on phone screens */
-  }
-
-  .btn-lg {
-    font-size: 0.875rem; /* Smaller button text on phone screens */
-    padding: 0.5rem 0.75rem; /* Adjust button padding */
+  50% {
+    transform: translateY(-20px);
   }
 }
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
 
-@media (max-width: 767px) {
-  .col-md-6 {
-    margin-bottom: 20px;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .social-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+  
+  .floating-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .hero-image-container {
+    height: 300px;
+    margin-top: 2rem;
+  }
+  
+  .cta-buttons {
+    text-align: center;
+  }
+  
+  .cta-buttons .btn {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 200px;
   }
 }

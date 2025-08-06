@@ -1,25 +1,48 @@
 
-<div class="container-fluid d-flex align-items-center vh-100">
-  <div class="mr-auto text-left">
-    <p class="lead">Hello World! My name is</p>
-    <h1 class="display-1">Sibeko Linda</h1>
-    <h2 class="text-muted">Backend Developer</h2>
-    <div class="mt-4">
-      <a href="https://github.com/LJSIBEKO" target="_blank" class="btn btn-outline-dark btn-lg mx-1 rounded-5">
-        <i class="bi bi-github custom-icon-size"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/linda-sibeko-272378205/" target="_blank" class="btn btn-outline-dark btn-lg mx-1 rounded-5">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a href="https://twitter.com/your-username" target="_blank" class="btn btn-outline-dark btn-lg mx-1 rounded-5">
-        <i class="bi bi-twitter"></i>
-      </a>
-      <a href="https://www.facebook.com/justice.sibeko.18/" target="_blank" class="btn btn-outline-dark btn-lg mx-1 rounded-5">
-        <i class="bi bi-facebook"></i>
-      </a>
-      <a href="https://www.instagram.com/justicesibeko/" target="_blank" class="btn btn-outline-dark btn-lg mx-1 rounded-5">
-        <i class="bi bi-instagram"></i>
-      </a>
+<div class="hero-section d-flex align-items-center vh-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="hero-content fade-in-up">
+          <p class="hero-greeting">Hello World! My name is</p>
+          <h1 class="hero-name">Sibeko Linda</h1>
+          <h2 class="hero-title">Backend Developer</h2>
+          <p class="hero-subtitle mt-3">
+            Recent graduate passionate about creating elegant solutions through code.
+            Ready to bring fresh perspectives and dedication to your next project.
+          </p>
+          <div class="social-links mt-4">
+            <a href="https://github.com/LJSIBEKO" target="_blank" class="social-btn github">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/linda-sibeko-272378205/" target="_blank" class="social-btn linkedin">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/your-username" target="_blank" class="social-btn twitter">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/justice.sibeko.18/" target="_blank" class="social-btn facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/justicesibeko/" target="_blank" class="social-btn instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+          <div class="cta-buttons mt-5">
+            <button (click)="scrollToAbout()" class="btn btn-primary btn-lg me-3">Learn More</button>
+            <a routerLink="/projects" class="btn btn-outline-primary btn-lg">View Projects</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <div class="hero-image-container">
+          <div class="floating-elements">
+            <div class="floating-icon code"><i class="bi bi-code-slash"></i></div>
+            <div class="floating-icon graduation"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="floating-icon rocket"><i class="bi bi-rocket-takeoff"></i></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -31,6 +54,6 @@
 <app-about></app-about>
 <app-experience></app-experience>
 <app-skills></app-skills>
-<!--<app-project></app-project>-->
+<app-project></app-project>
 
 

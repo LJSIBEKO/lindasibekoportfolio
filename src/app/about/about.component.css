@@ -1,0 +1,109 @@
+.about-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.graduation-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.graduation-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.graduation-img:hover {
+  transform: scale(1.05);
+}
+
+.graduation-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.graduation-icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 2px;
+}
+
+.about-content p {
+  color: #495057;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.about-content .lead {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.achievement-badge {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.achievement-badge:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .graduation-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .section-title {
+    text-align: center;
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .about-content {
+    text-align: center;
+  }
+}

@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import {AboutComponent} from "./about/about.component";
 import {ExperienceComponent} from "./experience/experience.component";
 import {ProjectComponent} from "./project/project.component";
+import {SkillsComponent} from "./skills/skills.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'about' , component: AboutComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'projects' , component:ProjectComponent},
+  { path: 'skills' , component: SkillsComponent},
   { path: '**', component: NotfoundComponent }
 
 ];
