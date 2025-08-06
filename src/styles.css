@@ -37,9 +37,10 @@ body.theme-dark .text-muted {
 }
 
 body.theme-dark .card {
-  background-color: #1a1a1a;
+  background-color: #2d2d2d;
   color: #ffffff;
-  border: 1px solid #333333;
+  border: 1px solid #404040;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
 body.theme-dark .navbar {
@@ -311,7 +312,7 @@ body.theme-dark .about-section {
 }
 
 body.theme-dark .experience-section {
-  background: #1a1a1a;
+  background: #0d0d0d;
 }
 
 body.theme-dark .skills-section {
@@ -319,7 +320,15 @@ body.theme-dark .skills-section {
 }
 
 body.theme-dark .projects-section {
-  background: #1a1a1a;
+  background: #0d0d0d;
+}
+
+body.theme-dark .graduation-image-container img {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+body.theme-dark .achievement-badge {
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
 }
 
 body.theme-dark .footer-section {
@@ -335,23 +344,27 @@ body.theme-dark .about-content .lead {
 }
 
 body.theme-dark .list-group-item {
-  background-color: #1a1a1a !important;
+  background-color: #2d2d2d !important;
   color: #ffffff !important;
-  border-color: #333333 !important;
+  border-color: #404040 !important;
 }
 
 body.theme-dark .list-group-item:hover {
-  background-color: #333333 !important;
+  background-color: #404040 !important;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
 }
 
 body.theme-dark .card-header {
-  background: linear-gradient(45deg, #333333, #1a1a1a) !important;
+  background: linear-gradient(45deg, #404040, #2d2d2d) !important;
   color: #ffffff !important;
+  border-bottom: 1px solid #555555;
 }
 
 body.theme-dark .work-in-progress {
-  background: #1a1a1a !important;
+  background: #2d2d2d !important;
   color: #ffffff !important;
+  border: 1px solid #404040;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
 body.theme-dark .work-in-progress h4 {
