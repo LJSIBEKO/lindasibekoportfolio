@@ -10,8 +10,202 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  color: #333;
+  padding-top: 70px;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme (Default) */
+body.theme-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.theme-dark .bg-light {
+  background-color: #1a1a1a !important;
+}
+
+body.theme-dark .bg-white {
+  background-color: #1a1a1a !important;
+}
+
+body.theme-dark .text-dark {
+  color: #ffffff !important;
+}
+
+body.theme-dark .text-muted {
+  color: #cccccc !important;
+}
+
+body.theme-dark .card {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+body.theme-dark .navbar {
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+
+body.theme-dark .navbar-brand {
+  color: #ffffff !important;
+}
+
+body.theme-dark .nav-link {
+  color: #cccccc !important;
+}
+
+body.theme-dark .nav-link:hover {
+  color: #ffffff !important;
+}
+
+body.theme-dark .section-title {
+  color: #ffffff !important;
+}
+
+body.theme-dark .card-title {
+  color: #ffffff !important;
+}
+
+body.theme-dark .card-text {
+  color: #cccccc !important;
+}
+
+body.theme-dark .hero-section {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .hero-name {
+  color: #ffffff !important;
+}
+
+body.theme-dark .hero-title {
+  color: #ffffff !important;
+}
+
+body.theme-dark .hero-subtitle {
+  color: #cccccc !important;
+}
+
+body.theme-dark .hero-greeting {
+  color: #cccccc !important;
+}
+
+/* Light Theme */
+body.theme-light {
   background-color: #fff;
+  color: #333;
+}
+
+body.theme-light .hero-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  color: #333 !important;
+}
+
+body.theme-light .hero-name {
+  color: #000000 !important;
+  text-shadow: none !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+body.theme-light .hero-title {
+  color: #2c3e50 !important;
+}
+
+body.theme-light .hero-subtitle {
+  color: #495057 !important;
+}
+
+body.theme-light .hero-greeting {
+  color: #6c757d !important;
+}
+
+body.theme-light .about-section {
+  background: #f8f9fa !important;
+}
+
+body.theme-light .experience-section {
+  background: #ffffff !important;
+}
+
+body.theme-light .skills-section {
+  background: #f8f9fa !important;
+}
+
+body.theme-light .projects-section {
+  background: #ffffff !important;
+}
+
+body.theme-light .footer-section {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+}
+
+body.theme-light .section-title {
+  color: #2c3e50 !important;
+}
+
+body.theme-light .card {
+  background-color: #ffffff !important;
+  color: #333 !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+body.theme-light .card-title {
+  color: #2c3e50 !important;
+}
+
+body.theme-light .card-text {
+  color: #6c757d !important;
+}
+
+body.theme-light .list-group-item {
+  background-color: #ffffff !important;
+  color: #333 !important;
+  border-color: #dee2e6 !important;
+}
+
+body.theme-light .list-group-item:hover {
+  background-color: #f8f9fa !important;
+  color: #007bff !important;
+}
+
+body.theme-light .work-in-progress {
+  background: #ffffff !important;
+  color: #333 !important;
+}
+
+body.theme-light .work-in-progress h4 {
+  color: #2c3e50 !important;
+}
+
+body.theme-light .welcome-message h3 {
+  color: #2c3e50 !important;
+}
+
+body.theme-light .about-content p {
+  color: #495057 !important;
+}
+
+body.theme-light .about-content .lead {
+  color: #2c3e50 !important;
+}
+
+body.theme-light .navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+body.theme-light .navbar-brand {
+  color: #2c3e50 !important;
+}
+
+body.theme-light .nav-link {
+  color: #495057 !important;
+}
+
+body.theme-light .nav-link:hover {
+  color: #007bff !important;
 }
 
 /* Smooth scrolling */
@@ -109,6 +303,63 @@ html {
 .form-control:focus {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
   outline: none;
+}
+
+/* Dark theme specific styles */
+body.theme-dark .about-section {
+  background: #000000;
+}
+
+body.theme-dark .experience-section {
+  background: #1a1a1a;
+}
+
+body.theme-dark .skills-section {
+  background: #000000;
+}
+
+body.theme-dark .projects-section {
+  background: #1a1a1a;
+}
+
+body.theme-dark .footer-section {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+body.theme-dark .about-content p {
+  color: #cccccc !important;
+}
+
+body.theme-dark .about-content .lead {
+  color: #ffffff !important;
+}
+
+body.theme-dark .list-group-item {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+body.theme-dark .list-group-item:hover {
+  background-color: #333333 !important;
+}
+
+body.theme-dark .card-header {
+  background: linear-gradient(45deg, #333333, #1a1a1a) !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .work-in-progress {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .work-in-progress h4 {
+  color: #ffffff !important;
+}
+
+body.theme-dark .welcome-message h3 {
+  color: #ffffff !important;
 }
 
 /* Responsive utilities */

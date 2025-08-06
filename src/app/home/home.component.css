@@ -3,6 +3,8 @@
   color: white;
   position: relative;
   overflow: hidden;
+  margin-top: -70px;
+  padding-top: 70px;
 }
 
 .hero-section::before {
@@ -186,6 +188,12 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .hero-section {
+    margin-top: -70px;
+    padding-top: 90px;
+    min-height: 100vh;
+  }
+  
   .hero-name {
     font-size: 2.5rem;
   }
@@ -204,15 +212,8 @@
     font-size: 1rem;
   }
   
-  .floating-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
-  
   .hero-image-container {
-    height: 300px;
-    margin-top: 2rem;
+    display: none;
   }
   
   .cta-buttons {

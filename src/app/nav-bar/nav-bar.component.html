@@ -12,22 +12,27 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeNavbar()">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection('about')" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" style="cursor: pointer;">About</a>
+          <a class="nav-link" (click)="scrollToSection('about')" style="cursor: pointer;">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
+          <a class="nav-link" routerLink="/projects" routerLinkActive="active" (click)="closeNavbar()">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection('skills')" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" style="cursor: pointer;">Skills</a>
+          <a class="nav-link" (click)="scrollToSection('skills')" style="cursor: pointer;">Skills</a>
         </li>
       </ul>
 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-2">
+          <button class="btn btn-outline-secondary theme-toggle" (click)="themeService.toggleTheme()">
+            <i class="bi" [ngClass]="themeService.getCurrentTheme() === 'dark' ? 'bi-sun' : 'bi-moon'"></i>
+          </button>
+        </li>
         <li class="nav-item">
-          <a class="btn btn-primary contact-btn" href="mailto:linda.sibeko@example.com">Contact Me</a>
+          <a class="btn btn-primary contact-btn" href="mailto:linda.sibeko@example.com" (click)="closeNavbar()">Contact Me</a>
         </li>
       </ul>
     </div>

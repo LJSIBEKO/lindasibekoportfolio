@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,13 +9,20 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public themeService: ThemeService) { }
 
   ngOnInit(): void {
   }
 
+  closeNavbar() {
+    const navbar = document.getElementById('navbarNavDropdown');
+    if (navbar?.classList.contains('show')) {
+      navbar.classList.remove('show');
+    }
+  }
+
   scrollToSection(sectionId: string): void {
-    // First navigate to home if not already there
+    this.closeNavbar();
     if (this.router.url !== '/home') {
       this.router.navigate(['/home']).then(() => {
         setTimeout(() => {
